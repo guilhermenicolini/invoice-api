@@ -18,6 +18,11 @@ export interface HttpResponse<T = any> {
   body?: T
 }
 
+export const ok = (data?: any): HttpResponse => ({
+  statusCode: HttpStatusCode.ok,
+  body: data
+})
+
 export const serverError = (error: unknown): HttpResponse => ({
   statusCode: HttpStatusCode.serverError,
   error: new ServerError(error instanceof Error ? error : undefined)

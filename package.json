@@ -12,8 +12,8 @@
     "prepare": "husky install",
     "update": "ncu --color --interactive && npm i",
     "build": "rimraf dist && tsc -p tsconfig-build.json",
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --clear -r dotenv/config src/index.ts",
-    "start": "node dist/index.js"
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --clear -r dotenv/config src/main/server.ts",
+    "start": "node dist/main/server.js"
   },
   "keywords": [],
   "author": "",
